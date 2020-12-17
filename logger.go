@@ -58,3 +58,7 @@ func New(opts ...Option) (*Logger, error) {
 
 	return logger, nil
 }
+
+func (l *Logger) Zap() *zap.Logger {
+	return l.l
+}
